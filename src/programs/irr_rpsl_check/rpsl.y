@@ -734,8 +734,8 @@ attr_status: T_ST_KEY non_null_lines { $$ = $2; }
 attr_inetnum: T_IN_KEY inetnum_range { $$ = $2; };
 
 /* inet6num class */
-attr_inet6num: T_I6_KEY T_PREFIX6
-  { is_globally_routable_v6 ($2,&curr_obj); $$ = $2; };
+attr_inet6num: T_I6_KEY T_PREFIX6 { $$ = $2; };
+/* { is_globally_routable_v6 ($2,&curr_obj); $$ = $2; }; */
 
 /* repository class */
 

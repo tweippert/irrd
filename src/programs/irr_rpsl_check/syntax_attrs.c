@@ -96,10 +96,15 @@ void is_globally_routable_v6 (char *prefix, parse_info_t *obj) {
     error_msg_queue (obj, "Error parsing IPV6 prefix", ERROR_MSG);
     return; 
   }
-  j = p - prefix;
-  if (j != 4 || (*prefix != '2' && *prefix != '3')) {
-    error_msg_queue (obj, "IPv6 prefix is not globally routable.  Prefixes must come from 2000::/3 address block", ERROR_MSG);
-  }
+
+  /* As DN42 uses ULA Range, strict Global Range Check isn't usefull, 
+   * disable it for now
+   * j = p - prefix;
+   * if (j != 4 || (*prefix != '2' && *prefix != '3')) {
+   *  error_msg_queue (obj, "IPv6 prefix is not globally routable.  Prefixes must come from 2000::/3 address block", ERROR_MSG);
+   * }
+   */
+
 }
 
 /* Given an inetnum address range (ie, inetnum: a1 - a2 or a1 > a2)

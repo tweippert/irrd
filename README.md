@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/irrdnet/irrd.svg?branch=master)](https://travis-ci.org/irrdnet/irrd)
 
+--- THIS BRANCH IS FOR DN42 ONLY ---
+
 This is the source distribution of the Internet Routing Registry Daemon (IRRd).
 
 IRRd is jointly maintained by Merit Network, Inc. and NTT Communications, Inc.
